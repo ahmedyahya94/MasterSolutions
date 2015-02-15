@@ -1,5 +1,5 @@
 #MasterSolutions
-### Member's Info
+### Member's Information
 
          Name | IDs
 ------------- | -------------
