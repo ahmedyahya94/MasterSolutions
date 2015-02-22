@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<title>Article Confirmation</title>
+<html>
+<style>
+  div[class="jumbotron"]{
+    background:url("http://i.imgur.com/akCA66X.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  div{
+    background-color: lightgrey;
+  }
+ body {
+ 	text-align:center;
+ }
+
+</style>
+<body>
+<header>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</header>
+
+<div class="container">
+<div class="jumbotron">
+  <img src="http://i.imgur.com/6JE8FYq.png" align="left"/>
+  
+  <p><br><br><br></p> 
+
+</div>
+<div class="row">
+<div class="col-md-4">
+
+</div>
+<div class="col-md-4">
+  </div>
+  <div class="col-md-4">
+  </div>
+
+</html>
+<body>
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @article.text %>
+</p>
+ 
+<h2>Comment</h2>
+<%= render @article.comments %>
+ 
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+ 
+<%= link_to 'Edit Article', edit_article_path(@article) %> |
+<%= link_to 'Back to Articles', articles_path %>
+
+</body>
+
+
+
+

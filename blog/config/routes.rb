@@ -1,16 +1,23 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'welcome/index'
-
-
+   
+  match '/Bprofile' => 'welcome#Bprofile', via: [:get]
+  match '/Eprofile' => 'welcome#Eprofile', via: [:get]
+  match '/Hprofile' => 'welcome#Hprofile', via: [:get]
+  match '/Mprofile' => 'welcome#Mprofile', via: [:get]
+  match '/Rprofile' => 'welcome#Rprofile', via: [:get]
+  match '/Tprofile' => 'welcome#Tprofile', via: [:get]
+  match '/Yprofile' => 'welcome#Yprofile', via: [:get]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+ resources :articles do
+  resources :comments
+  end
+
   root 'welcome#index'
-
-  match "/users/sign_out", via: [:get, :delete], to: "devise/sessions#destroy"
-
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
