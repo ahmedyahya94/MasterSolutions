@@ -1,0 +1,10 @@
+<% content_for :page_title, "Browsing Ideas" %>
+
+<%= render "shared/pagination", object: @ideas %>
+
+<ul class="ideas list-unstyled">
+  <%= render @ideas %>
+</ul>
+
+<%= render "shared/pagination", object: @ideas %>
+
