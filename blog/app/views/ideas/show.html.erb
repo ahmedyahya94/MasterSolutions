@@ -1,0 +1,53 @@
+<% content_for :page_title, "#{@idea.title} by #{@idea.user.name}" %>
+
+<div class="idea">
+  <header class="idea-header">
+    <%= render @idea %>
+  </header>
+
+  <div class="row">
+
+    <%# Idea body/markdown content: %>
+    <div class="col-md-8">
+      <div class="idea-document">
+        <% unless @idea.body.empty? %>
+          <%= sanitize UnsafeMarkdownPresenter.to_html(@idea.body) %>
+        <% else %>
+          <em>No description given :(</em>
+        <% end %>
+      </div>
+    </div>
+
+    <%# Sidebar %>
+    <div class="col-md-4">
+
+      <div class="idea-actions">
+        <% unless @idea.belongs_to_user?(current_user) %>
+          <section>
+            <h4 class="section-title">Let's try something else...</h4>
+            <p class="callout-paragraph">
+              Do you want to take this idea in a different direction? Don't like where
+              it is going? Copy it to your account and modify it to your liking!
+            </p>
+
+            <div class="well text-center">
+              <%= link_to "#", class: "btn btn-primary btn-lg" do %>
+                <i class="icon-code-fork"></i> Fork this Idea!
+              <% end %>
+            </div>
+          </section>
+        <% end %>
+
+        <section>
+          <h4 class="section-title">Share</h4>       
+          <ul class="idea-social-actions list-inline">
+            <%= link_to_share_to_twitter "#{@idea.title} by #{@idea.user.name} @ whatdo: #{idea_url(@idea)}",
+                class: "social-badge twitter-social-badge", title: "Tweet this idea" do %>
+              <i class="icon-twitter icon-large"></i>
+            <% end %>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

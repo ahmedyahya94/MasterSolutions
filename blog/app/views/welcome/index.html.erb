@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<title>Home Page</title>
+
+<html>
+<style>
+  div[class="jumbotron"]{
+    background:url("http://i.imgur.com/akCA66X.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  div{
+    background-color: lightgrey;
+  }
+</style>
+<body>
+<header>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</header>
+
+<div class="container">
+<div class="jumbotron">
+  <img src="http://i.imgur.com/6JE8FYq.png" align="left"/>
+  
+  <p><br><br><br></p> 
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h2>Our Mission</h2>
+    <p>To serve our clients by providing the highest quality professional services that address their business issues. We attract, recruit, and retain the most knowledgeable and passionate professionals, and we provide a collaborative culture that enables them to thrive professionally and personally. We deliver superior financial results to the investment community while contributing to the communities in which we live and work.</p>
+  </div>
+  <div class="col-md-4">
+    <h2>Our Vision</h2>
+    <p>To be the most trusted and respected professional services firm recognized by our clients for delivering excellence.</p>
+  </div>
+  <div class="col-md-4">
+    <h2>Our Team</h2>
+    <a href="<%= url_for controller: 'welcome', action: 'Rprofile'%>"><img src="http://i.imgur.com/YQFxuzV.jpg?2" style= "width: 70px; height: 70px; border-radius: 20px;"></img></a>
+    
+    <a href="<%= url_for controller: 'welcome', action: 'Mprofile'%>"><img src="http://i.imgur.com/CfGSuZ5.jpg?1" style= "width: 70px; height: 70px; border-radius: 20px;"></img></a>
+
+    <a href="<%= url_for controller: 'welcome', action: 'Tprofile'%>"><img src="http://i.imgur.com/vLAcZeh.jpg?1" style= "width: 70px; height: 70px; border-radius: 20px;"></img></a>
+
+    <a href="<%= url_for controller: 'welcome', action: 'Eprofile'%>"><img src="http://i.imgur.com/dVduMCKm.jpg?1" style= "width: 70px; height: 70px; border-radius: 20px;"></img></a>
+
+    <a href="<%= url_for controller: 'welcome', action: 'Bprofile'%>"><img src="http://i.imgur.com/2ImfzDE.jpg?2" style= "width: 70px; height: 70px; border-radius: 20px;"></img></a>
+
+    <a href="<%= url_for controller: 'welcome', action: 'Hprofile'%>"><img src="http://i.imgur.com/s84PyZW.jpg?1" style= "width: 70px; height: 70px; border-radius: 20px;"></img></a>
+
+    <a href="<%= url_for controller: 'welcome', action: 'Yprofile'%>"><img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/60660_10204065648777401_8514636941979222693_n.jpg?oh=2d583ae88de3c3f3481409a9a39389a1&oe=55806382&__gda__=1435118027_0290b2ea00af76c4b8570bd0ca7f7265" style= "width: 70px; height: 70px; border-radius: 20px;"></img></a>
+
+
+
+    </a>
+    <p>Our unique vision, mission and values capture the essence of who we are and how we interact with one another. In addition, it speaks to how we go to market and our commitment to delivering excellence to our clients, shareholders, and the community.</p>
+  </div>
+   <div class="col-md-4">
+    <h2>History</h2>
+    <p>Start up software engeneering consultancy run by a group of GUC students.</p>
+  </div>
+   <div class="col-md-4">
+    <h2>Our Products</h2>
+    <p>We offer sofware solutions for SMEs.</p>
+  </div>
+  <div class="col-md-4">
+    <h2>Customers</h2>
+    <p>Small and medium enterprises seeking software solutions.</p>
+  </div>
+  <div class="col-md-4"></div>
+    <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <h2>Follow us</h2>
+    <a href="https://www.facebook.com/pages/MasterSolutions/847808498623501">
+    <img style="width: 30px; height: 30px; border-radius: 70px;"
+    <img src="http://i.imgur.com/1zyrGh5.png" title="source: imgur.com" />
+  </a>
+    <img style="width: 30px; height: 30px; border-radius: 70px;"
+    <img src="http://i.imgur.com/f9PeM7r.png" title="source: imgur.com" />
+    <img style="width: 30px; height: 30px; border-radius: 70px;"
+    <img src="http://i.imgur.com/hN4O8yx.png" title="source: imgur.com" />
+     <a href="http://www.instagram.com/mastersolutionsguc">
+    <img style="width: 30px; height: 30px; border-radius: 70px;"
+    <img src="http://i.imgur.com/1KR6v2b.png" title="source: imgur.com" />
+  </a>
+  <a href="http://www.twitter.com/mastersolguc">
+    <img style="width: 30px; height: 30px; border-radius: 70px;"
+    <img src="http://i.imgur.com/ytk8b8R.jpg" title="source: imgur.com" />
+  </a>
+    <br><br>
+  </div>
+</div>
+</html><%= link_to 'My Blog', controller: 'articles' %>
